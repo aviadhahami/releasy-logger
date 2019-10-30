@@ -3,7 +3,7 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(morgan('short'));
+app.use(morgan('tiny'));
 
 app.get('*',(req,res)=>{
     return res.status(200).send();
