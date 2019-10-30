@@ -9,6 +9,7 @@ app.get('*',(req,res)=>{
     return res.status(200).send();
 });
 
-module.exports = app.listen(process.env.PORT || 3000,()=>{
-    console.log('server listening');
+const PORT = process.env.PORT || 3000
+module.exports = app.listen(PORT,()=>{
+    console.log(`server listening on ${PORT}`);
 });
